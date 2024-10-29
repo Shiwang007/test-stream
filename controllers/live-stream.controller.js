@@ -13,7 +13,7 @@ exports.createLiveStream = async (req, res) => {
       liveStreamUrl.value = value;
       await liveStreamUrl.save();
     } else {
-      liveStreamUrl = new StringData({ value });
+      liveStreamUrl = new LiveStream({ value });
       await liveStreamUrl.save();
     }
     return res
